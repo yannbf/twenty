@@ -1,6 +1,7 @@
-import { expect, jest } from '@storybook/jest';
+import { expect } from '@storybook/test';
+import * as test from '@storybook/test';
 import { Meta, StoryObj } from '@storybook/react';
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/test';
 import { RecoilRoot } from 'recoil';
 
 import { RecordIndexActionMenuDropdown } from '@/action-menu/components/RecordIndexActionMenuDropdown';
@@ -11,9 +12,9 @@ import { isDropdownOpenComponentState } from '@/ui/layout/dropdown/states/isDrop
 import { extractComponentState } from '@/ui/utilities/state/component-state/utils/extractComponentState';
 import { IconCheckbox, IconHeart, IconTrash } from 'twenty-ui';
 
-const deleteMock = jest.fn();
-const markAsDoneMock = jest.fn();
-const addToFavoritesMock = jest.fn();
+const deleteMock = test.fn();
+const markAsDoneMock = test.fn();
+const addToFavoritesMock = test.fn();
 
 const meta: Meta<typeof RecordIndexActionMenuDropdown> = {
   title: 'Modules/ActionMenu/RecordIndexActionMenuDropdown',

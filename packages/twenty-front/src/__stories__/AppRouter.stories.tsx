@@ -1,5 +1,6 @@
 import { getOperationName } from '@apollo/client/utilities';
-import { jest } from '@storybook/jest';
+import '@storybook/test';
+import * as test from '@storybook/test';
 import { Meta, StoryObj } from '@storybook/react';
 import { HttpResponse, graphql } from 'msw';
 import { HelmetProvider } from 'react-helmet-async';
@@ -46,7 +47,7 @@ export type Story = StoryObj<typeof AppRouter>;
 
 export const Default: Story = {
   play: async () => {
-    jest
+    test
       .spyOn(indexAppPath, 'getIndexAppPath')
       .mockReturnValue('iframe.html' as AppPath);
   },
@@ -54,7 +55,7 @@ export const Default: Story = {
 
 export const DarkMode: Story = {
   play: async () => {
-    jest
+    test
       .spyOn(indexAppPath, 'getIndexAppPath')
       .mockReturnValue('iframe.html' as AppPath);
   },

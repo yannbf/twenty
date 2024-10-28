@@ -1,4 +1,5 @@
-import { expect, jest } from '@storybook/jest';
+import { expect } from '@storybook/test';
+import * as test from '@storybook/test';
 import { Meta, StoryObj } from '@storybook/react';
 import { RecoilRoot } from 'recoil';
 
@@ -12,8 +13,8 @@ import { isBottomBarOpenedComponentState } from '@/ui/layout/bottom-bar/states/i
 import { userEvent, waitFor, within } from '@storybook/test';
 import { IconCheckbox, IconTrash } from 'twenty-ui';
 
-const deleteMock = jest.fn();
-const markAsDoneMock = jest.fn();
+const deleteMock = test.fn();
+const markAsDoneMock = test.fn();
 
 const meta: Meta<typeof RecordIndexActionMenuBar> = {
   title: 'Modules/ActionMenu/RecordIndexActionMenuBar',

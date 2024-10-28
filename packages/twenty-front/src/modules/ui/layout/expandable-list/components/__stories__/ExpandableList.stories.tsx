@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { expect } from '@storybook/jest';
+import { expect } from '@storybook/test';
 import { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/test';
 import { ComponentDecorator, MAIN_COLOR_NAMES, Tag } from 'twenty-ui';
